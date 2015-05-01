@@ -7,6 +7,13 @@
 
 require_once "modules/is-debug.php";
 
+/**
+ * Load Jetpack compatibility file.
+ */
+require get_template_directory() . '/modules/jetpack.php';
+
+
+
 /*------------------------------------*\
     External Modules/Files
 \*------------------------------------*/
