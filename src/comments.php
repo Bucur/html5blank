@@ -8,10 +8,17 @@
 <?php if (have_comments()) : ?>
 
 	<h2><?php comments_number(); ?></h2>
-
+	
+	<div class="navigation">
+         <?php paginate_comments_links(); ?> 
+        </div>
 	<ul>
 		<?php wp_list_comments('type=comment&callback=html5blankcomments'); // Custom callback in functions.php ?>
 	</ul>
+	
+	<div class="navigation">
+         <?php paginate_comments_links(); ?> 
+        </div>
 
 <?php elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
