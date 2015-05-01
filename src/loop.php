@@ -29,6 +29,14 @@
 
 		<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php ?>
 
+                <?php wp_link_pages( array(
+	          'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'html5blank' ) . '</span>',
+	          'after'       => '</div>',
+	          'link_before' => '<span>',
+	          'link_after'  => '</span>',
+	           ) );
+                ?>
+
 		<?php edit_post_link(); ?>
 
 	</article>
